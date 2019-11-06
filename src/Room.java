@@ -7,12 +7,8 @@ public class Room {
     public Room() {
     }
 
-    public Room move(Direction direction) {
-        if (door.containsKey(direction)) {
-            return null;
-        }
-        else
-            return this;
+    public Door getDoor(Direction direction) {
+        return door.getOrDefault(direction, null);
     }
 
     public HashMap<Direction, Door> getDoor() {
