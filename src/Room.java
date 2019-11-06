@@ -2,9 +2,14 @@ import java.util.HashMap;
 
 public class Room {
 
+    private String name;
     private final HashMap<Direction, Door> door = new HashMap<>();
 
     public Room() {
+    }
+
+    public Room(String name) {
+        this.name = name;
     }
 
     public Door getDoor(Direction direction) {
@@ -15,10 +20,16 @@ public class Room {
         return door;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     @Override
     public String toString() {
-        return "Room{" +
-                "door=" + door +
-                '}';
+        return name;
     }
 }
